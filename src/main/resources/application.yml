@@ -1,0 +1,28 @@
+server:
+  port: 8081
+
+spring:
+  jackson:
+    serialization:
+      write_dates_as_timestamps: false
+  datasource:
+    url: jdbc:h2:mem:testdb
+  username: sa
+  password:
+  driverClassName: org.h2.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  batch:
+    initialize-schema: always
+
+batchouput:
+  file:
+    location: C:\Users\venkaiah\Downloads\spring-batch-cdc\spring-batch-cdc\src\main\resources\ouput.json
+
